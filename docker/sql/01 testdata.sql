@@ -8,7 +8,7 @@ INSERT INTO product_img (img) VALUES
 ('img2.jpg'),
 ('img3.jpg');
 
-INSERT INTO product_categorie (category_namme) VALUES
+INSERT INTO product_categorie (category_name) VALUES
 ('groente'),
 ('fruit');
 

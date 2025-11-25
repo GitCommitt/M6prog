@@ -27,7 +27,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `product_img` (
   `idproduct_img` INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  `img` VARCHAR(45) NULL,
+  `img` VARCHAR(250) NULL,
   PRIMARY KEY (`idproduct_img`))
 ENGINE = InnoDB;
 
@@ -37,9 +37,9 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `product_categorie` (
   `idproduct_categorie` INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  `category_namme` VARCHAR(45) NOT NULL,
+  `category_name` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`idproduct_categorie`),
-  UNIQUE INDEX `category_namme_UNIQUE` (`category_namme` ASC) VISIBLE)
+  UNIQUE INDEX `category_name_UNIQUE` (`category_name` ASC) VISIBLE)
 ENGINE = InnoDB;
 
 
