@@ -1,5 +1,5 @@
 <?php
-class user 
+class product_img 
 {   
         public int $idproduct_img;
         public string $img;

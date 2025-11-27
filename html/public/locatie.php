@@ -1,13 +1,7 @@
 <?php
 
 
-include_once("../source/database.php");
-
-$connection = database_connect();
-
-$result = $connection->query("SELECT 'het werkt' as nice");
-
-// print_r($result->fetch_all());
+include_once("../source/views/header-data.php");
 
 ?>
 
@@ -21,6 +15,8 @@ $result = $connection->query("SELECT 'het werkt' as nice");
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link rel="stylesheet" href="./assets/css/styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  
 
 </head>
 <body class="site">

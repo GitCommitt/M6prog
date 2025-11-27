@@ -1,5 +1,5 @@
 <?php
-class user 
+class product_categorie 
 {   
         public int $idproduct_categorie;
         public string $category_name;

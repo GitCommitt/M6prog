@@ -1,5 +1,5 @@
 <?php
-class user 
+class aanbiedingen 
 {   
         public int $idaanbiedingen;
         public string $name;
