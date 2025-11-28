@@ -16,31 +16,25 @@ include_once("../source/views/header-data.php");
   <link rel="stylesheet" href="./assets/css/styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
 
-  
+  <?php include_once "../source/dataclasses/groenekistdb.php"?>
 
 </head>
 <body class="site">
     <?= include "../source/views/header.php" ?>
 
-  <section class="locatie-section">
-    <h2>Locatie</h2>
-      <div class="adres-info">
-      <p>Amsterdam</p>
-      <p>transformatorweg</p>
-      </div>
-  </section>
 
     <?= include "../source/views/footer.php" ?>
 
+    <h1>Ons Fruit</h1>
+    <section class="products">
     <?php
-foreach (Product::GetProductsByCategory($connection, 'groente') as $product) {
+    foreach (Product::GetProductsByCategory($connection, 'fruit') as $product)
+   {
     include "../source/views/product-pair.php";
-}
-
-foreach (Product::GetProductsByCategory($connection, 'fruit') as $product) {
-    include "../source/views/product-pair.php";
-}
-?>
+    }
+    ?>
+    </section>
+    
 
 </body>
 </html>

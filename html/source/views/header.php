@@ -3,6 +3,7 @@
     <nav>
       <a href="index.php">Home</a>
       <a href="locatie.php">Locatie</a>
-      <a href="product.php">Groente en Fruit</a>
+      <a href="groente.php">Groente</a>
+      <a href="fruit.php">Fruit</a>
     </nav>
   </header>

@@ -3,15 +3,6 @@
 
 include_once("../source/views/header-data.php");
 
-
-  $query = 
-  ' SELECT *  from product';
-
-  $stmt = $connection->prepare($query);
-  $stmt->execute();
-  
-
-  $result = $stmt->get_result();
 ?>
 
 
@@ -31,27 +22,18 @@ include_once("../source/views/header-data.php");
 <body class="site">
     <?= include "../source/views/header.php" ?>
 
-    <?= include "../source/views/product-pair.php" ?>
 
     <?= include "../source/views/footer.php" ?>
 
+    <h1>Ons Fruit</h1>
+    <section class="products">
     <?php
-    while ($row = mysqli_fetch_assoc($result)){
-        $product = new Product(
-            $row['idproduct'],
-            $row['name'],
-            $row['description'],
-            $row['price'],
-            $row['stock'],
-            $row['product_img_idproduct_img'],
-            $row['product_categorie_idproduct_categorie']
-        );?>
-        <section>
-        <h2><?=$row["name"]?></h2>
-        </section>
-    <?php
+    foreach (Product::GetProductsByCategory($connection, 'groente') as $product)
+   {
+    include "../source/views/product-pair.php";
     }
     ?>
+    </section>
     
 
 </body>
