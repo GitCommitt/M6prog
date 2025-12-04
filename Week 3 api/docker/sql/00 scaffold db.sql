@@ -24,15 +24,15 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `berichten`
+-- Table `bericht`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `berichten` (
-  `idberichten` INT NOT NULL AUTO_INCREMENT,
+CREATE TABLE IF NOT EXISTS `bericht` (
+  `idbericht` INT NOT NULL AUTO_INCREMENT,
   `content` VARCHAR(250) NOT NULL,
   `user_iduser` INT NOT NULL,
-  PRIMARY KEY (`idberichten`),
-  INDEX `fk_berichten_user1_idx` (`user_iduser` ASC) VISIBLE,
-  CONSTRAINT `fk_berichten_user1`
+  PRIMARY KEY (`idbericht`),
+  INDEX `fk_bericht_user1_idx` (`user_iduser` ASC) VISIBLE,
+  CONSTRAINT `fk_bericht_user1`
     FOREIGN KEY (`user_iduser`)
     REFERENCES `user` (`iduser`)
     ON DELETE NO ACTION
@@ -41,22 +41,22 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `user_has_berichten`
+-- Table `user_has_bericht`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `user_has_berichten` (
+CREATE TABLE IF NOT EXISTS `user_has_bericht` (
   `user_iduser` INT NOT NULL,
-  `berichten_idberichten` INT NOT NULL,
-  PRIMARY KEY (`user_iduser`, `berichten_idberichten`),
-  INDEX `fk_user_has_berichten_berichten1_idx` (`berichten_idberichten` ASC) VISIBLE,
-  INDEX `fk_user_has_berichten_user_idx` (`user_iduser` ASC) VISIBLE,
-  CONSTRAINT `fk_user_has_berichten_user`
+  `bericht_idbericht` INT NOT NULL,
+  PRIMARY KEY (`user_iduser`, `bericht_idbericht`),
+  INDEX `fk_user_has_bericht_bericht1_idx` (`bericht_idbericht` ASC) VISIBLE,
+  INDEX `fk_user_has_bericht_user_idx` (`user_iduser` ASC) VISIBLE,
+  CONSTRAINT `fk_user_has_bericht_user`
     FOREIGN KEY (`user_iduser`)
     REFERENCES `user` (`iduser`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `fk_user_has_berichten_berichten1`
-    FOREIGN KEY (`berichten_idberichten`)
-    REFERENCES `berichten` (`idberichten`)
+  CONSTRAINT `fk_user_has_bericht_bericht1`
+    FOREIGN KEY (`bericht_idbericht`)
+    REFERENCES `bericht` (`idbericht`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
