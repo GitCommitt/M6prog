@@ -8,6 +8,7 @@ class product
         public bool $stock;
         public int $product_img_idproduct_img;
         public int $product_img_idproduct_categorie;
+        
     public function __construct(
         int $idproduct,
         string $name,
