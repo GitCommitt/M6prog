@@ -2,12 +2,7 @@
 
 
 include_once("../source/database.php");
-
-$connection = database_connect();
-
-$result = $connection->query("SELECT 'het werkt' as nice");
-
-print_r($result->fetch_all());
+include_once("../source/dataclasses/formsdb.php");
 
 ?>
 
@@ -31,11 +26,12 @@ print_r($result->fetch_all());
         <button type="submit"></button>
     </form>
 
-    <section class="messages">
-    <div class="message">
-        <div class="name">Daan</div>
-        <div class="text">Dit is mijn eerste bericht.</div>
-    </div>
+    <?php foreach (bericht::GetAllBerichten($connection) as $bericht)
+   {
+    include "../source/views/bericht.php";
+    }
+    ?>
+    
 
 </body>
 </html>
