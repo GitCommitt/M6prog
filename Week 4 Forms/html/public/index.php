@@ -25,11 +25,17 @@ print_r($result->fetch_all());
         <label for="naam">Naam</label>
         <input type="text" id="naam" name="naam" required>
 
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
+        <label for="text">Bericht</label>
+        <input type="text" id="text" name="text" required>
 
         <button type="submit"></button>
     </form>
+
+    <section class="messages">
+    <div class="message">
+        <div class="name">Daan</div>
+        <div class="text">Dit is mijn eerste bericht.</div>
+    </div>
 
 </body>
 </html>
