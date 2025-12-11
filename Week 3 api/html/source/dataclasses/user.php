@@ -16,12 +16,24 @@ class user
         $this->token = $token;
     }
 
-    public function GetAllUser(){
+    public static function GetAllUser($connection){
+        $query = "SELECT * FROM user";
+        $stmt = $connection->prepare($query);
+        $stmt->execute();
+        $result = $stmt->get_result();
 
+        return $result;
     }
 
-    public function GetUserById(){
+
+    public static function GetUserById($connection, $iduser){
+        $query = "SELECT * FROM user WHERE iduser = ?";
+        $stmt = $connection->prepare($query);
+        $stmt->bind_param("s", $iduser);
+        $stmt->execute();
+        $result = $stmt->get_result();
         
+        return $result;
     }
 
 }

@@ -2,12 +2,11 @@
 
 function handleGet($request_url, $connection) {
     if (sizeof($request_url) < 3) {
-        return bericht::GetAllBericht($connection);
+        return user::GetAllUser($connection);
     } else {
-        return bericht::GetBerichtById($connection, $request_url[2]);
+        return User::GetUserById($connection, $request_url[2]);
     }
 }
-
 
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
 
