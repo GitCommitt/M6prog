@@ -1,4 +1,7 @@
-INSERT INTO `user`(`username`) VALUES ('Koen');
+INSERT INTO `user`(`username`) 
+VALUES 
+('Koen'),
+('piet');
 
 INSERT INTO `bericht`(`content`, `user_iduser`) 
 VALUES 

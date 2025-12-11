@@ -2,8 +2,8 @@
 class user
 {
     public int $iduser;
-    public int $username;
-    public int $token;
+    public string $username;
+    public string $token;
 
     public function __construct(
         int $iduser,
@@ -22,7 +22,12 @@ class user
         $stmt->execute();
         $result = $stmt->get_result();
 
-        return $result;
+       $user = [];
+        while ($row = mysqli_fetch_assoc($result)){
+
+        $users[] = user::FromResultRow($row);
+        }
+        return $users;
     }
 
 
@@ -32,9 +37,22 @@ class user
         $stmt->bind_param("s", $iduser);
         $stmt->execute();
         $result = $stmt->get_result();
-        
-        return $result;
+
+        $user = [];
+        while ($row = mysqli_fetch_assoc($result)){
+
+        $users[] = user::FromResultRow($row);
+        }
+        return $users;
     }
 
+    public static function FromResultRow($row)
+    {
+        return new user(
+            $row['iduser'],
+            $row['username'],
+            $row['token']
+        );
+    }
 }
 

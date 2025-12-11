@@ -27,20 +27,5 @@ class bericht
             
         $result = $stmt->get_result();
 
-        $berichten = [];
-        while ($row = mysqli_fetch_assoc($result)){
 
-        $berichten[] = bericht::FromResultRow($row);
-        }
-        return $berichten;
-    }
-
-    public static function FromResultRow($row)
-    {
-        return new bericht(
-            $row['idbericht'],
-            $row['naam'],
-            $row['bericht']
-        );
-    }
 }
