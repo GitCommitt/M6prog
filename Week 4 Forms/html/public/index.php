@@ -1,7 +1,5 @@
 <?php
 
-
-include_once("../source/database.php");
 include_once("../source/dataclasses/formsdb.php");
 
 ?>
@@ -15,7 +13,7 @@ include_once("../source/dataclasses/formsdb.php");
      <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 <body>
-        <h1>Form</h1>
+    <h1>Form</h1>
     <form method="post" action="">
         <label for="naam">Naam</label>
         <input type="text" id="naam" name="naam" required>
