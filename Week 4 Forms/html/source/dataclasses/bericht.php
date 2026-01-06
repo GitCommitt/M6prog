@@ -21,7 +21,7 @@ class bericht
               FROM bericht p 
               ';
 
-        $stmt = $connection->prepare($query);
+        $stmt = $connec tion->prepare($query);
 
         $stmt->execute();
             
