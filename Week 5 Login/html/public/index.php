@@ -1,6 +1,6 @@
 <?php
 
-include_once("../source/dataclasses/formsdb.php");
+include_once("../source/dataclasses/mydb.php");
 
 $connection = database_connect();
 
@@ -20,7 +20,19 @@ print_r($result->fetch_all());
 </head>
 <body>
 
-    
+    <div class="form-user_login">
+        <h2 class="form-user_login-h2">username:</h2>
+        <textarea id="username"></textarea>
+
+        <h2 class="form-user_login-h2">password:</h2>
+        <textarea id="password"></textarea>
+
+        <button onclick="login()" class="form-user_login-button">Submit</button>
+    </div>
+
+    <section class="login-results"></section>
+
+    <script src="./assets/js/main.js"></script>
 
 </body>
 </html>
