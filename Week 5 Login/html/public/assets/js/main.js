@@ -19,9 +19,9 @@ async function login() {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ username, hashedpass })
 })
-.then(response => response.json())
+.then(response => response.text())
 .then(data => {
-    document.querySelector('.login-results').innerText = JSON.stringify(data);
+    document.querySelector('.login-results').innerText = (data);
 });
 
 }
