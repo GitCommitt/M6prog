@@ -11,14 +11,18 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 
 
 -- -----------------------------------------------------
--- Table `User`
+-- Table `users`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `user` (
-  `idUser` INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  `name` VARCHAR(45) NOT NULL,
-  `pass` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`idUser`),
-  UNIQUE INDEX `name_UNIQUE` (`name` ASC) VISIBLE)
+CREATE TABLE IF NOT EXISTS `users` (
+  `idusers` INT NOT NULL AUTO_INCREMENT,
+  `username` VARCHAR(45) NOT NULL,
+  `passwordhash` VARCHAR(145) NOT NULL,
+  `displayname` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`idusers`),
+  UNIQUE INDEX `passwordhash_UNIQUE` (`passwordhash` ASC) VISIBLE,
+  UNIQUE INDEX `username_UNIQUE` (`username` ASC) VISIBLE,
+  UNIQUE INDEX `idusers_UNIQUE` (`idusers` ASC) VISIBLE,
+  UNIQUE INDEX `displayname_UNIQUE` (`displayname` ASC) VISIBLE)
 ENGINE = InnoDB;
 
 

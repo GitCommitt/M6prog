@@ -1,79 +1,207 @@
-body {
-    margin: 0;
-    font-family: sans-serif;
-    background: #f5fdf5;
-    color: #2e7d32;
+body{
+    margin:0;
+    font-family:Arial,Helvetica,sans-serif;
+    background:linear-gradient(135deg,#667eea,#764ba2);
+    color:#ffffff;
+    min-height:100vh
 }
 
-header {
-    background: #ffffff;
-    padding: 12px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid #dcefdc;
+.body-login{
+    margin:0;
+    height:100vh;
+    display:flex;
+    width: 100vw;
+    align-items:center;
+    flex-direction: column;
+    background:linear-gradient(135deg,#667eea,#764ba2);
+    font-family:Arial,Helvetica,sans-serif
 }
 
-.logo {
-    font-weight: bold;
-    font-size: 1.2rem;
+header{
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(10px);
+    padding:16px 32px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between
 }
 
-nav a {
-    margin-left: 16px;
-    text-decoration: none;
-    color: #2e7d32;
+.logo{
+    font-weight:700;
+    font-size:1.3rem
 }
 
-.index-section {
-    padding: 20px;
-    max-width: 600px;
-    margin: auto;
+nav a{
+    margin-left:20px;
+    text-decoration:none;
+    color:#ffffff;
+    font-weight:500;
+    transition:.3s
 }
 
-section {
-    padding: 20px;
-    max-width: 600px;
-    margin: auto;
+nav a:hover{
+    opacity:.7
 }
 
-h2 {
-    margin-top: 0;
-    font-size: 1.4rem;
+.index-section,
+section{
+    padding:40px 20px;
+    max-width:900px;
+    margin:auto
 }
 
-p {
-    margin-bottom: 1em;
-    line-height: 1.5;
+h2{
+    margin-top:0;
+    font-size:1.8rem
+}
+
+p{
+    margin-bottom:1em;
+    line-height:1.6;
+    opacity:.9
 }
 
 .product-section{
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
+    display:flex;
+    gap:24px;
+    flex-wrap:wrap
 }
 
 .product{
-    background-color: rgba(128, 128, 128, 0.24);
-    border-radius: 10%;
-    padding: 5%;
-    display: flex;
-    flex-direction: column;
+    background:rgba(255,255,255,.15);
+    border-radius:16px;
+    padding:20px;
+    display:flex;
+    flex-direction:column;
+    width:260px;
+    backdrop-filter:blur(6px);
+    box-shadow:0 10px 25px rgba(0,0,0,.2)
 }
 
 .product-img{
-    width: 100%;
+    width:100%;
+    border-radius:12px;
+    margin-bottom:12px
 }
 
 .product-price{
-    text-align: center;
+    text-align:center;
+    font-weight:600;
+    margin-top:auto
 }
 
+.form-user_login{
+    margin:60px auto;
+    background:#ffffff;
+    color:#333333;
+    padding:40px;
+    width:320px;
+    border-radius:16px;
+    box-shadow:0 20px 40px rgba(0,0,0,.25);
+    display:flex;
+    flex-direction:column;
+    gap:14px
+}
 
-footer {
-    text-align: center;
-    padding: 12px;
-    font-size: 0.9rem;
-    color: #5b6b5b;
-    border-top: 1px solid #dcefdc;
+.form-user_login-h2{
+    margin:0;
+    font-size:14px;
+    font-weight:600;
+    color:#333333
+}
+
+.form-user_login textarea{
+    resize:none;
+    width:100%;
+    padding:12px;
+    border:1px solid #cccccc;
+    border-radius:8px;
+    font-size:14px
+}
+
+.form-user_login textarea:focus{
+    outline:none;
+    border-color:#667eea
+}
+
+.form-user_login-button{
+    margin-top:10px;
+    padding:12px;
+    background:#667eea;
+    color:#ffffff;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s
+}
+
+.form-user_login-button:hover{
+    background:#556cd6
+}
+
+.login-results{
+    margin-top:10px;
+    text-align:center;
+    font-size:14px;
+    color:#e74c3c
+}
+
+.login-card{
+    background:#fff;
+    padding:40px;
+    width:320px;
+    border-radius:12px;
+    box-shadow:0 20px 40px rgba(0,0,0,.2)
+}
+.login-card h1{
+    text-align:center;
+    margin-bottom:30px;
+    color:#333
+}
+.login-card label{
+    display:block;
+    margin-bottom:6px;
+    color:#555;
+    font-size:14px
+}
+.login-card input{
+    width:100%;
+    padding:12px;
+    margin-bottom:20px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:14px
+}
+.login-card input:focus{
+    outline:none;
+    border-color:#667eea
+}
+.login-card button{
+    width:100%;
+    padding:12px;
+    background:#667eea;
+    color:#fff;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s
+}
+.login-card button:hover{
+    background:#556cd6
+}
+.login-results{
+    margin-top:15px;
+    text-align:center;
+    color:#e74c3c;
+    font-size:14px
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    font-size:.9rem;
+    opacity:.8
 }

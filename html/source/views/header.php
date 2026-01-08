@@ -5,5 +5,6 @@
       <a href="locatie.php">Locatie</a>
       <a href="groente.php">Groente</a>
       <a href="fruit.php">Fruit</a>
+      <a href="Login.php">| Login</a>
     </nav>
   </header>
