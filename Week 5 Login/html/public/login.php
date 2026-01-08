@@ -25,7 +25,7 @@ if (!$user) {
 }
 
 if ($user->VerifyPassword($password)) {
-    echo ('Je bent ingelogd!'. $user->displayname);
+    echo ('Je bent ingelogd! '. $user->displayname);
 } else {
     http_response_code(404);
     echo ('Onjuist wachtwoord');
