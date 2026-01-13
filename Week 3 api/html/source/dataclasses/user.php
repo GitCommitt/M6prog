@@ -22,7 +22,7 @@ class user
         $stmt->execute();
         $result = $stmt->get_result();
 
-       $user = [];
+       $users = [];
         while ($row = mysqli_fetch_assoc($result)){
 
         $users[] = user::FromResultRow($row);
@@ -38,7 +38,7 @@ class user
         $stmt->execute();
         $result = $stmt->get_result();
 
-        $user = [];
+        $users = [];
         while ($row = mysqli_fetch_assoc($result)){
 
         $users[] = user::FromResultRow($row);

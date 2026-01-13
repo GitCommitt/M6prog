@@ -13,3 +13,4 @@ class UserResponse
         $this->username = $username;
     }
 }
+

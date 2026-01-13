@@ -22,7 +22,12 @@ class bericht
         $stmt->execute();
         $result = $stmt->get_result();
 
-        return $result;
+        $berichten = [];
+        while ($row = mysqli_fetch_assoc($result)) {
+            $berichten[] = bericht::FromResultRow($row);
+        }
+
+        return $berichten;
     }
 
 
@@ -35,5 +40,15 @@ class bericht
         
         return $result;
     }
+
+    public static function FromResultRow($row)
+    {
+        return new bericht(
+            $row['idbericht'],
+            $row['content'],
+            $row['user_iduser']
+        );
+    }
 }
 
+    
